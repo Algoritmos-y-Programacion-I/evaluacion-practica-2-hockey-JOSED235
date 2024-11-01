@@ -47,12 +47,14 @@ public class Executable {
 
 			switch (option) {
 					case 1:
-
+                        fixture();
 						break;
 					case 2:
+                        PrecargarInformacion();
 
 						break;
 					case 3:
+                        desplazarse();
 
 						break;
 					case 4:
@@ -82,5 +84,22 @@ public class Executable {
         mainApp.run(flag);
 
     }
+    /**
+     * Metodo del fixture
+     * @pre No necesita de precondiciones
+     * @param args No requiere de argumentos 
+     * @post Se crea el fixture
+     * 
+     */
+    private void fixture(){
+        controladora.fixture();
+    }
+    private void PrecargarInformacion(){
+        controladora.PrecargarInformacion();
+    }
+    public void desplazarse(){
+        controladora.PaseJugadores();
+    }
+
 
 }
